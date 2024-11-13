@@ -6,7 +6,7 @@
 
 随意与不随意实际上是遂意与不遂意，也就是是否受控
 
- ![img](https://img-blog.csdnimg.cn/direct/3f90359dfe8d4edb85ecf961f3fe20ed.png)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)例如这里的在环境中看到红色杯子，是因为杯子颜色鲜艳，会让人第一眼看到，这是不需要遂意的，而想读书带着个人意愿，是遂意的在搜索
+ ![img](http://image.aaaieee.cn/image/3f90359dfe8d4edb85ecf961f3fe20ed.png)![点击并拖拽以移动](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)例如这里的在环境中看到红色杯子，是因为杯子颜色鲜艳，会让人第一眼看到，这是不需要遂意的，而想读书带着个人意愿，是遂意的在搜索
 
 ## 注意力机制
 
@@ -28,7 +28,7 @@
 
 ## 非参注意力汇聚
 
-![img](https://img-blog.csdnimg.cn/direct/f7cac3aa90474a6cacf41e8472f2a891.png)
+![img](http://image.aaaieee.cn/image/f7cac3aa90474a6cacf41e8472f2a891.png)
 
 $$
 f(x)=\sum_{i=1}^{n}{\frac{K(x-x_{i})}{\sum_{i=1}^{n}{K(x-x_{j})}}}y_{i}
@@ -93,7 +93,7 @@ a(q, $ k_ {i} $ )= $ \langle $ q, $ k_ {i} $ $\rangle$ /$\sqrt {d} $
 
 ## 自注意力机制
 
- ![img](https://img-blog.csdnimg.cn/direct/6f8ea18ad4dd4bf2aad998af74f0648a.png)![自注意力机制运算](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
+ ![img](http://image.aaaieee.cn/image/6f8ea18ad4dd4bf2aad998af74f0648a.png)![自注意力机制运算](data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==)
 
  
 
@@ -171,6 +171,55 @@ transformer解码器也是由多个相同的层叠加而成的，并且层中使
 - 等价于两层核窗口为1的一维卷积层
 
 ## 层归一化
+
+
+
+
+
+
+
+
+
+# self attention
+
+##  加性注意力
+
+一般来说，当查询和键是不同长度的向量时，可以使用加性注意力作为评分函数
+
+k $ \in $ $ R^ {h\times k} $ , $ W_ {q} $ $ \in $ $ R^ {h\times q} $ ,v $ \in $ $ R^ {h} $ 
+a(k,q)= $ v^ {T} $ $ \tanh $ ( $ W_ {k} $ k+ $ W_ {q} $ q)
+
+等价于将key与value合并起来后放入到一个隐藏大小为$h$，输出大小为1的单隐藏层MLP
+
+## 缩放点积注意力
+
+直接使用点积可以得到计算效率很高的评分函数，但是点积操作需要K与Q拥有相同的长度d，此时如果将
+
+a(q, $ k_ {i} $ )= $ \langle $ q, $ k_ {i} $ $\rangle$ /$\sqrt {d} $ 
+
+除一个根号d的目的是为了消除长度的影响
+
+现在使用的都是点乘attention
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

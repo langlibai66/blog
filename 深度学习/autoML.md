@@ -73,7 +73,7 @@ data_amend = exp_mclf101 = setup(
 
 这个表格包含了模型缩写字符串
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/eWEPx9ZqUHssmZmsV4OeYUDjCUd4l2oE2rGtmDre8Q7QR10cNuBwkiaEybtoTsRlSFYcohSOszYticZK04N9iczsQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1)
+![图片](http://image.aaaieee.cn/image/640)
 
 最后，我们将对陌生数据进行预测。为此，我们只需要传递将用于预测的数据集的模型。注意的是，确保它与之前设置环境时提供的格式相同。PyCaret 构建了所有步骤的管道，并将预测数据传递到管道中并输出结果。
 
